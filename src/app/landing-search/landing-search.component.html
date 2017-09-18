@@ -1,0 +1,56 @@
+<div style="background:blue ;bottom: 0;left: 0;position: fixed;right: 0;top:0;color:white;">
+
+  <div class="container-fluid" style="width:100%;position: fixed;top:5%;">
+    <div class="row header">
+      <div class="col-sm-8" style="background:yellow ">
+        <img src="../../assets/np.png" style="align-items:center" class="logos">
+      </div>
+      <div class="col-sm-3 io" style="text-align: center;background:yellow ">
+      <div ><a href="#"><span class="glyphicon glyphicon-eye-open"></span>My Favourites</a></div>
+      </div>
+      <div class="col-sm-1 io" style="text-align: center;background:yellow">
+      <div ><a href="#" ><span class="glyphicon glyphicon-log-in"></span> Login</a></div>
+    </div>
+    </div>
+  </div>-->
+  <br>
+  <br>
+  <br>
+   <div class="container-fluid" style="width:100%;position: fixed;top:40%;">
+    <div class="row imager">
+      <div class="col-sm-12" id="logo" style="text-align: center;">
+       <img src="../../assets/new12.jpg" class="img-fluid logo" alt="Responsive image">
+      </div>
+    </div>
+    <div class="row">
+     <div class="col-sm-12">
+        <div id="imaginary_container" style="padding-top: 12px;">
+            <div class="input-group stylish-input-group">
+                <input #searchBox id="search-box" (keyup)="search(searchBox.value)" type="text" class="form-control"  placeholder="Search For Provider" >
+                <span class="input-group-addon">
+                    <button type="submit" class="btn btn-warning">
+                    </button>
+                </span>
+            </div>
+            <div>
+<div *ngFor="let provider of providers | async"
+      (click)="gotoDetail(provider)" class="search-result" >
+  {{provider.name}}
+</div>
+</div>
+        </div>
+    </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="container-fluid" style="width:100%;position: fixed;bottom:2%;">
+    <div class="row">
+      <div class="col-sm-12"  style="text-align: center ;color:white">
+       All rights reserved @Update Pro.
+      </div>
+    </div>
+    </div>
+</div>

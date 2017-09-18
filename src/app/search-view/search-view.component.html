@@ -1,0 +1,82 @@
+
+<div style="width:100%">
+ <div class="row">
+  <button class="btn btn-danger bn" (click)="goback">Go Back</button>
+ </div>
+<br>
+<hr>
+ <div class="thumbnail">
+  <ul *ngFor="let art of articles" >
+        <li style="list-style:none;">
+          <h2 style="float:left"><a href={{art.url}} target="_blank">{{art.title}}</a></h2>
+          <br>
+          <br>
+          <div class="col-sm-1">
+          <img src={{art.urlToImage}} alt="Image" class=" rounded float-left" style="height:130px ;padding-right:40px;">
+         </div>
+         <br/>
+          <p style="font-size:15px;padding-right:40px;">{{art.description}}</p>
+          <p style="font-size:15px;padding-right:40px;">{{art.author}} {{art.publishedAt}}</p>
+          <br>
+          <div class="res">
+            <button (click)="Comment()" style="" target="_blank" span class="glyphicon glyphicon-save res1">
+              Add Comments</button><br>
+            <button (click)="save()" style="" target="_blank" span class="glyphicon glyphicon-save res2">
+              Save Article</button><br>
+          </div>
+          <hr>
+
+
+
+        </li>
+  </ul>
+ </div>
+
+</div>
+
+<!-- <div *ngIf="articles">
+
+         <ul class="list-group article">
+              <br>
+              <li *ngFor="let art of articles;let i=index;" style="list-style:none;" class="list6">
+                  <div *ngIf="i<9" class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <div class="list5">
+                          <h4><a href={{art.url}} target="_blank">{{art.title}}</a></h4>
+
+                         <img src={{art.urlToImage}} alt="Image" style="width:40%;height:150px;">
+
+                         <p style="font-size:12px;">{{art.description}}</p>
+                          <button (click)="save()" style="float:right;" span class="glyphicon glyphicon-save">SAVE</button>
+                          <hr>
+
+                     </div>
+                  </div>
+
+             </li>
+          </ul>
+      </div> -->
+
+<!-- <div class="container-fluid" id="article" style="width:100%;">
+    <div class="row">
+      <button class="btn btn-danger" (click)"goBack()">Go Back</button>
+    </div>
+    <ul class=""  style="position:absolute;top:10%;width:80%; left:10%;">
+    <li *ngFor="let article of articles" >
+
+    <div class="row">
+    <div class="col-sm-1 " >
+      <img class="pull-right" src="{{article.urlToImage}}" height="60px">
+    </div>
+    <div class="col-sm-9" >
+    <a href="{{article.url}}" target="_blank">{{article.title}}: </a><br>
+    {{article.description}}
+    </div>
+    <div class="col-sm-2" style="border-left: 2px solid black;">
+    <a href="{{article.url}}" target="_blank">save article</a><br><br>
+    </div>
+    </div>
+    </li>
+
+    </ul>
+    </div> -->
+

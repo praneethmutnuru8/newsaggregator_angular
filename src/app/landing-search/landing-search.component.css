@@ -1,0 +1,52 @@
+#logo {
+  margin-top: -80px;
+
+}
+.logos{
+  padding-top:10px;
+}
+.header{
+  margin-top:-28px;
+}
+.io{
+  padding-top:20px;
+
+}
+
+.stylish-input-group .input-group-addon{
+    background: white !important;
+}
+.stylish-input-group .form-control{
+
+	border-right:0;
+	box-shadow:0 0 0;
+	border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+
+.search-result{
+
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  color: black;
+  height: 35px;
+  padding: 5px;
+  background-color: white;
+  cursor: pointer;
+
+}
+
+.search-result:hover {
+  color: #eee;
+  background-color: #FC650E;
+
+}
+
+.imager{
+  margin-top: 100px;
+}
+
+

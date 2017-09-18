@@ -1,0 +1,20 @@
+#article ul{
+  list-style: none;
+
+  }
+  #article li{
+  padding-top: 10px;
+
+  }
+  .bn{
+    margin-left: 20px;
+  }
+  .res1{
+    float: right;
+    margin-top: 22px;
+    margin-left: 20px;
+    margin-right: 10px;
+  }
+  .res2{
+    float: right;
+  }
