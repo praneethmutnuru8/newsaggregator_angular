@@ -1,9 +1,10 @@
 
+<br>
 <div style="width:100%">
  <div class="row">
-  <button class="btn btn-danger bn" (click)="goback">Go Back</button>
+  <button class="btn btn-danger bn" >Go Back</button>
  </div>
-<br>
+
 <hr>
  <div class="thumbnail">
   <ul *ngFor="let art of articles" >
@@ -19,9 +20,9 @@
           <p style="font-size:15px;padding-right:40px;">{{art.author}} {{art.publishedAt}}</p>
           <br>
           <div class="res">
-            <button (click)="Comment()" style="" target="_blank" span class="glyphicon glyphicon-save res1">
+            <button target="_blank" span class="glyphicon glyphicon-save res1">
               Add Comments</button><br>
-            <button (click)="save()" style="" target="_blank" span class="glyphicon glyphicon-save res2">
+            <button target="_blank" span class="glyphicon glyphicon-save res2">
               Save Article</button><br>
           </div>
           <hr>

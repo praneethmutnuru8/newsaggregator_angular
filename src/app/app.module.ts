@@ -1,13 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule }    from '@angular/http';
+import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { RouterModule, Routes } from '@angular/router';
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './in-memory-data.service';
+import { InMemoryDataService } from './in-memory-data.service';
 
 import { AppComponent } from './app.component';
 import { LandingSearchComponent } from './landing-search/landing-search.component';
@@ -25,7 +25,7 @@ import { SearchViewComponent } from './search-view/search-view.component';
      HttpModule,
      HttpClientModule,
      FormsModule,
-     InMemoryWebApiModule.forRoot(InMemoryDataService,{passThruUnknownUrl: true}),
+     InMemoryWebApiModule.forRoot(InMemoryDataService, {passThruUnknownUrl: true}),
          RouterModule.forRoot([
       {
         path: 'landing',

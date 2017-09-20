@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable }        from 'rxjs/Observable';
-import { Subject }           from 'rxjs/Subject';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
 import { ActivatedRoute, ParamMap } from '@angular/router';
-import { Router }            from '@angular/router';
+import { Router } from '@angular/router';
 
 // Observable class extensions
 import 'rxjs/add/observable/of';
@@ -14,8 +14,8 @@ import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/switchMap';
 
 
-import { SearchHeadlineApiService }          from '../search-headline-api.service';
-import { Provider }        from '../provider';
+import { SearchHeadlineApiService } from '../search-headline-api.service';
+import { Provider } from '../provider';
 @Component({
   selector: 'app-landing-search',
   templateUrl: './landing-search.component.html',
@@ -26,13 +26,13 @@ export class LandingSearchComponent implements OnInit {
   providers: Observable<Provider[]>;
   private searchTerms = new Subject<string>();
 
-  constructor( private searchHeadlineApiService: SearchHeadlineApiService ,private router: Router) {}
+  constructor( private searchHeadlineApiService: SearchHeadlineApiService , private router: Router) {}
 
     search(term: string): void {
     this.searchTerms.next(term);
   }
 
-  ngOnInit() :void {
+  ngOnInit(): void {
 
    this.providers = this.searchTerms
       .debounceTime(300)        // wait 300ms after each keystroke before considering the term
@@ -51,11 +51,11 @@ export class LandingSearchComponent implements OnInit {
   }
 
   gotoDetail(provider: Provider): void {
-    let link = ['/searchview'];
+    const link = ['/searchview'];
     this.router.navigate(link);
     const caseNumber = provider.id;
     this.searchHeadlineApiService.publishData(caseNumber);
-    console.log('Sibling1Component-received from sibling2: '+ caseNumber );
+    console.log('Sibling1Component-received from sibling2: ' + caseNumber );
    }
 
 
